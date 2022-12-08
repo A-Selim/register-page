@@ -18,14 +18,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
 }
 
 .main {
-  max-width: 500px;
+  max-width: 400px;
   height: 100vh;
   margin: 0 auto;
-  padding: 3em 2em;
+  padding: 2em;
+  justify-content: space-between;
 }
 
 .img-wrapper {
@@ -41,6 +41,7 @@ body {
 
 .content-wrapper {
   height: 45%;
+  justify-content: space-evenly;
 }
 
 .title {
@@ -84,7 +85,7 @@ body {
     background-color: rgba(245, 247, 255, 0.85);
     width: 90%;
     max-width: 1000px;
-    height: 50vh;
+    height: 60vh;
     border-radius: 10px;
     margin: 0;
     padding: 3em;
@@ -95,10 +96,15 @@ body {
   .img-wrapper,
   .content-wrapper {
     width: 45%;
-    height: 100%;
+    height: 90%;
   }
 
   .content-wrapper {
     align-items: flex-start;
+  }
+
+  .sub-title {
+    text-align: left;
+    max-width: 300px;
   }
 }
