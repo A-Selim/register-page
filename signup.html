@@ -20,30 +20,40 @@
         <h1 class="title">Create Account</h1>
         <p class="sub-title">Go ahead and sign up, let everyone know how awesome you are!</p>
 
-        <form action="#" class="signup-form">
+        <form class="signup-form" id="signup-form">
           <div class="input-wrapper">
             <label for="username"><i class="ri-user-line label-icon"></i></label>
-            <input type="text" minlength="5" maxlength="15" placeholder="Username" required />
+            <input name="username" type="text" id="username" placeholder="Username" />
           </div>
+          <span class="error-message" id="username-error"></span>
 
           <div class="input-wrapper">
             <label for="email"><i class="ri-mail-line label-icon"></i></label>
-            <input type="email" placeholder="Email" required />
+            <input name="email" type="text" id="email" placeholder="Email" />
           </div>
+          <span class="error-message" id="email-error"></span>
 
           <div class="input-wrapper">
             <label for="password"><i class="ri-lock-2-line label-icon"></i></label>
-            <input type="password" minlength="8" placeholder="Password" required />
+            <input name="password" type="password" id="password" placeholder="Password" />
           </div>
 
           <div class="input-wrapper">
-            <label for="passwordconfirm"><i class="ri-lock-2-line label-icon"></i></label>
-            <input type="password" minlength="8" placeholder="Confirm password" required />
+            <label for="password_confirmation"><i class="ri-lock-2-line label-icon"></i></label>
+            <input
+              name="password_confirmation"
+              type="password"
+              id="password_confirmation"
+              placeholder="Confirm password"
+            />
           </div>
+          <span class="error-message" id="password-error"></span>
 
-          <button type="submit" class="btn">Create Account</button>
+          <button type="submit" class="btn submit-btn">Create Account</button>
         </form>
       </div>
     </main>
+
+    <script src="./js/signup.js"></script>
   </body>
 </html>
