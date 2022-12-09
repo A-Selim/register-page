@@ -63,7 +63,7 @@ function checkUserName(username) {
   } else if (endWithNum) {
     errorMessage = "Username must not end with only number.";
   } else if (username.length < 5 || username.length > 15) {
-    errorMessage = "Username must consist of 5 to 5 characters.";
+    errorMessage = "Username must consist of 5 to 15 characters.";
   }
 
   if (regexTest && !startWithNum && !endWithNum && username.length >= 5 && username.length <= 15) {

@@ -30,7 +30,7 @@
   padding: 0.5em 1em;
   display: flex;
   align-items: center;
-  margin-top: 0.5em;
+  margin-top: 0.8em;
 }
 
 .input-wrapper label {
@@ -60,18 +60,13 @@
 }
 
 .submit-btn {
-  margin-top: 1em;
+  margin-top: 1.5em;
 }
 
 .error-message {
-  height: 3em;
   font-size: 0.8em;
   color: red;
   opacity: 0;
-}
-
-.error-message#password-error {
-  height: 6em;
 }
 
 @media (min-width: 1024px) {
