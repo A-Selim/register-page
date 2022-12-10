@@ -24,7 +24,7 @@ body {
   max-width: 400px;
   height: 100vh;
   margin: 0 auto;
-  padding: 2em;
+  padding: 1em;
   justify-content: space-between;
 }
 
@@ -87,7 +87,7 @@ body {
     background-color: rgba(245, 247, 255, 0.85);
     width: 90%;
     max-width: 1000px;
-    height: 70vh;
+    height: 50vh;
     border-radius: 10px;
     margin: 0;
     padding: 3em;

@@ -2,8 +2,6 @@ const signUpForm = document.getElementById("signup-form");
 const inputElements = document.getElementsByTagName("input");
 const errorElements = document.getElementsByClassName("error-message");
 
-window.addEventListener("load", () => document.getElementById("username").focus());
-
 signUpForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -12,13 +10,9 @@ signUpForm.addEventListener("submit", (event) => {
 
   const { username, email, password, password_confirmation } = userData;
 
-  const isUsername = checkUserName(username);
-  const isValidEmail = checkEmail(email);
-  const isValidPassword = checkPassword(password, password_confirmation);
-
-  if (!isUsername) return;
-  if (!isValidEmail) return;
-  if (!isValidPassword) return;
+  if (!isValidUserName(username)) return;
+  if (!isValidEmail(email)) return;
+  if (!isValidPassword(password, password_confirmation)) return;
 
   fetch("https://goldblv.com/api/hiring/tasks/register", {
     method: "POST",
@@ -42,7 +36,7 @@ Array.from(inputElements).forEach((input) => {
   });
 });
 
-function checkUserName(username) {
+function isValidUserName(username) {
   const usernameError = document.getElementById("username-error");
 
   // Regex test if string consists only of letters and numbers
@@ -75,7 +69,7 @@ function checkUserName(username) {
   }
 }
 
-function checkEmail(email) {
+function isValidEmail(email) {
   const emailError = document.getElementById("email-error");
   const regexEmailTest = /^\S+@\S+\.\S+$/.test(email);
 
@@ -88,7 +82,7 @@ function checkEmail(email) {
   }
 }
 
-function checkPassword(password, passwordConfirm) {
+function isValidPassword(password, passwordConfirm) {
   const passwordError = document.getElementById("password-error");
   const regexPasswordTest = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(password);
   const passwordsMatch = password === passwordConfirm;
